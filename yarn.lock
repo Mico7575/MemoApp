@@ -1910,6 +1910,11 @@
     "@urql/core" ">=2.3.1"
     wonka "^4.0.14"
 
+"@use-expo/font@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@use-expo/font/-/font-2.0.0.tgz"
+  integrity sha512-oOJ2uaRyZNQg7PnQviz7nBcdrRL38zxScab4ktgtI4asa6G0dHW9wg307uJJmn0sHS04Yqtw+m0EOjDcGw3iWg==
+
 "@xmldom/xmldom@~0.7.7":
   version "0.7.10"
   resolved "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.10.tgz"
@@ -3629,7 +3634,7 @@ expo-file-system@~15.2.0, expo-file-system@~15.2.2:
   dependencies:
     uuid "^3.4.0"
 
-expo-font@~11.1.1:
+expo-font@>=8.1.0, expo-font@~11.1.1:
   version "11.1.1"
   resolved "https://registry.npmjs.org/expo-font/-/expo-font-11.1.1.tgz"
   integrity sha512-X+aICqYY69hiiDDtcNrjq8KutHrH2TrHuMqk0Rfq0P7hF6hMd+YefwLBNkvIrqrgmTAuqiLjMUwj2rHLqmgluw==
