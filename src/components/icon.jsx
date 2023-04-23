@@ -24,7 +24,7 @@ export default function Icon(props) {
 }
 
 Icon.propTypes = {
-  name: oneOf(["plus", "delete", "pemcil", "check"]).isRequired,
+  name: oneOf(["plus", "delete", "pencil", "check"]).isRequired,
   size: number,
   color: string,
 };
