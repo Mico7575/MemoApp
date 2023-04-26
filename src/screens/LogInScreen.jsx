@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -14,6 +14,23 @@ export default function LogInScreen(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { navigation } = props;
+
+  useEffect(() => {
+    // ログインした時
+    console.log("userEffect!");
+    return () => {
+      // ログイン画面から離れる時（memoリスト画面へ遷移する直前）
+      console.log("Unmount!");
+    };
+  }, []);
+  useEffect(() => {
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        navigation.reset({ index: 0, routes: [{ name: "MemoList" }] });
+      }
+    });
+    return unsubscribe;
+  }, []);
 
   function handlePress() {
     firebase
@@ -32,6 +49,7 @@ export default function LogInScreen(props) {
   return (
     <View style={styles.container}>
       <View style={styles.inner}>
+        <Text style={styles.title}>LogIn</Text>
         <TextInput
           style={styles.input}
           value={email}
