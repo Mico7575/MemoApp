@@ -6,8 +6,8 @@ function Hello(props) {
   //const children = props.children; 以下と同じ。
   const { children, bang, style } = props;
   return (
-    //バッククォート(``)と${}を用いた場合は${children}変数を使用することを意味する。
-    // バッククォート使用しない場合：<Text style={styles.text}>Hello {children}</Text>
+    // バッククォート(``)と${}を用いた場合は${children}変数を使用することを意味する。
+    //★バッククォート使用しない場合：<Text style={styles.text}>Hello {children}</Text>
     <View>
       <Text style={[styles.text, style]}>{`Hello
       ${children}${bang ? "!" : ""}`}</Text>
